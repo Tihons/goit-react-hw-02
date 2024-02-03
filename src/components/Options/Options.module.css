@@ -12,14 +12,14 @@
   
     border: none;
     border-radius: 56px;
-    background: #ffd4b8;
-    box-shadow: 6px 6px 12px #d9b49c, -6px -6px 12px #fff4d4;
+    background: #0f6ef3;
+    box-shadow: 6px 6px 12px #3a0a8d, -6px -6px 12px #210a62;
   
     transition: all 750ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .optionsBox > button:hover,
   .optionsBox > button:focus {
-    background: #ffa8a3;
-    box-shadow: inset 6px 6px 12px #d98f8b, inset -6px -6px 12px #ffc1bb;
+    background: #2012bc;
+    box-shadow: inset 6px 6px 12px #4873c2, inset -6px -6px 12px #294b9f;
   }
