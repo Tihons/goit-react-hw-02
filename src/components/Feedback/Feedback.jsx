@@ -1,23 +1,13 @@
 import css from './Feedback.module.css';
 
-export const Feedback = ({ checking, total, positive, obj: { good, neutral, bad } }) => {
+export const Feedback = ({ feedbackVal, total, rating }) => {
   return (
-    <div className={css.feedbackBox}>
-      {checking ? (
-        <p>No feedback yet</p>
-      ) : (
-        <>
-          <div className={css.stats}>
-            <p>Good: {good}</p>
-            <p>Neutral: {neutral}</p>
-            <p>Bad: {bad}</p>
-          </div>
-          <div className={css.results}>
-            <p>Total: {total}</p>
-            <p>Positive: {positive}%</p>
-          </div>
-        </>
-      )}
+    <div className={css.wrap}>
+      <p className={css.text}>Good: {feedbackVal.good}</p>
+      <p className={css.text}>Neutral: {feedbackVal.neutral}</p>
+      <p className={css.text}>Bad: {feedbackVal.bad}</p>
+      <p className={css.text}>Total: {total}</p>
+      <p className={css.text}>Positive: {rating}%</p>
     </div>
   );
 };

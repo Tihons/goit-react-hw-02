@@ -1,3 +1,4 @@
+import React from 'react';
 import css from './Options.module.css';
 
 export const Options = ({
@@ -11,7 +12,7 @@ export const Options = ({
       <button onClick={() => onHandleClick(good)}>Good</button>
       <button onClick={() => onHandleClick(neutral)}>Neutral</button>
       <button onClick={() => onHandleClick(bad)}>Bad</button>
-      {checking ? null : <button onClick={onHandleClickReset}>Reset</button>}
+      {!checking && <button onClick={onHandleClickReset}>Reset</button>}
     </div>
   );
 };
