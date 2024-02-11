@@ -1,14 +1,14 @@
 import css from './App.module.css';
-import { useState, useEffect } from 'react';
-import { Description } from './Description/Description';
-import { Feedback } from './Feedback/Feedback';
-import { Options } from './Options/Options';
+ import { useState, useEffect } from 'react'; 
+ import { Description } from './Description/Description'; 
+ import { Feedback } from './Feedback/Feedback'; 
+ import { Options } from './Options/Options';
 
-const config = {
-  good: 0,
-  neutral: 0,
-  bad: 0,
-};
+ 
+ const config = {
+   good: 0,
+    neutral: 0,
+     bad: 0, };
 
 const localStorage = () => {
   const savedObject = window.localStorage.getItem('settings');
@@ -30,14 +30,14 @@ export const App = () => {
   };
 
   const handleClickReset = () => {
-    window.localStorage.clear();
-    setCount((count = config));
+    
+    setCount(( config));
   };
 
   const nameParams = Object.keys(config);
   const totalFeedback = count.good + count.bad + count.neutral;
-  const positive = Math.round(((count.good + count.neutral) / totalFeedback) * 100);
-  const cheakAnalogy = JSON.stringify(config) === JSON.stringify(count);
+  const positive = Math.round(((count.good + count.neutral) / totalFeedback) * 100); 
+  const cheakAnalogy = (totalFeedback === 0);
 
   return (
     <div className={css.wrapper}>
