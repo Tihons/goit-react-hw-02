@@ -37,20 +37,19 @@ export const App = () => {
   const nameParams = Object.keys(config);
   const totalFeedback = count.good + count.bad + count.neutral;
   const positive = Math.round(((count.good + count.neutral) / totalFeedback) * 100); 
-  const cheakAnalogy = (totalFeedback === 0);
-
   return (
-    <div className={css.wrapper}>
+    <>
       <Description />
-
-      <Options
-        checking={cheakAnalogy}
-        onHandleClick={handleClick}
-        onHandleClickReset={handleClickReset}
-        params={nameParams}
-      />
-
-      <Feedback checking={cheakAnalogy} total={totalFeedback} positive={positive} obj={count} />
-    </div>
+      <Options updateHandlers={updateValues} total={totalFeedback} />
+      {totalFeedback === 0 ? (
+        <Notification />
+      ) : (
+        <Feedback
+          feedbackVal={values}
+          total={totalFeedback}
+          rating={ratingFeedback}
+        />
+      )}
+    </>
   );
-};
+      }
