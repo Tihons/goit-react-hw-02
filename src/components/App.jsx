@@ -1,3 +1,9 @@
+import React, { useState, useEffect } from "react";
+import css from "./App.module.css";
+import { Description } from "./Description/Description";
+import { Feedback } from "./Feedback/Feedback";
+import { Options } from "./Options/Options";
+
 export const App = () => {
   const localStorageSettings = {
     good: 0,
