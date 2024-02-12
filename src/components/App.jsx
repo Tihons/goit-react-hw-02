@@ -48,7 +48,6 @@ export const App = () => {
       <p>Total feedback is not 0</p>
     );
   }
-
   return (
     <div className={css.wrapper}>
       <Description />
@@ -63,7 +62,15 @@ export const App = () => {
         total={totalFeedback}
         positive={positive}
         obj={count}
-      />
+      >
+        {checking ? (
+          <p>No feedback yet</p>
+        ) : totalFeedback === 0 ? (
+          <p>Total feedback is 0</p>
+        ) : (
+          <p>Total feedback is not 0</p>
+        )}
+      </Feedback>
     </div>
   );
 };
