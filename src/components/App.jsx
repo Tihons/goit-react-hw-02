@@ -3,6 +3,7 @@ import css from "./App.module.css";
 import { Description } from "./Description/Description";
 import { Feedback } from "./Feedback/Feedback";
 import { Options } from "./Options/Options";
+import { Notification } from "./Notification/Notification";
 
 export const App = () => {
   const localStorageSettings = {
