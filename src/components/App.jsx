@@ -44,14 +44,14 @@ export const App = () => {
     <div className={css.wrapper}>
       <Description />
       <Options
-        checking={checking}
+        checking={totalFeedback}
         onHandleClick={handleClick}
         onHandleClickReset={handleClickReset}
         params={nameParams}
       />
       {totalFeedback ? (
         <Feedback
-          checking={checking}
+          checking={totalFeedback > 0}
           total={totalFeedback}
           positive={positive}
           obj={count}
