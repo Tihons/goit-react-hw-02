@@ -1,6 +1,11 @@
-import css from './Feedback.module.css';
+import css from "./Feedback.module.css";
 
-export const Feedback = ({ checking, total, positive, obj: { good, neutral, bad } }) => {
+export const Feedback = ({
+  checking,
+  total,
+  positive,
+  obj: { good, neutral, bad },
+}) => {
   return (
     <div className={css.feedbackBox}>
       {checking ? (

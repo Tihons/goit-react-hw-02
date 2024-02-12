@@ -1,5 +1,5 @@
-import React from 'react';
-import css from './Options.module.css';
+import React from "react";
+import css from "./Options.module.css";
 
 export const Options = ({
   checking,
