@@ -12,7 +12,7 @@ export const Options = ({
       <button onClick={() => onHandleClick(good)}>Good</button>
       <button onClick={() => onHandleClick(neutral)}>Neutral</button>
       <button onClick={() => onHandleClick(bad)}>Bad</button>
-      {!checking && <button onClick={onHandleClickReset}>Reset</button>}
+      {checking && <button onClick={onHandleClickReset}>Reset</button>}
     </div>
   );
 };
